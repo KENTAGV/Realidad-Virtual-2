@@ -6,9 +6,8 @@ public class LivesCube : MonoBehaviour
     {
         GameManager.Instance.RemoveLife();
 
-        bool hasLife =
-            GameManager.Instance.HasLives(1);
+        bool result = GameManager.Instance.HasLives(1);
 
-        Debug.Log(hasLife);
+        Debug.Log(result);
     }
 }

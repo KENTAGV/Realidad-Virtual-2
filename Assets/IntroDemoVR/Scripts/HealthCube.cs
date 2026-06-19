@@ -6,9 +6,13 @@ public class HealthCube : MonoBehaviour
     {
         GameManager.Instance.AddHealth();
 
-        int hp =
+        int value =
             GameManager.Instance.GetHealthMinus(20);
 
-        Debug.Log(hp);
+        int value2 =
+            GameManager.Instance.MultiplyValues(2,3);
+
+        Debug.Log(value);
+        Debug.Log(value2);
     }
 }

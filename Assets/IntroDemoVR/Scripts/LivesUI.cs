@@ -12,7 +12,7 @@ public class LivesUI : MonoBehaviour
         GameManager.Instance.OnLivesChanged += UpdateText;
     }
 
-    private void UpdateText()
+    public void UpdateText()
     {
         livesText.text =
             "Lives: " +

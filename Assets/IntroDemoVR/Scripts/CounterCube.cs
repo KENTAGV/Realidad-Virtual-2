@@ -6,11 +6,13 @@ public class CounterCube : MonoBehaviour
     {
         GameManager.Instance.AddCounter();
 
-        GameManager.Instance.AddScore(10);
-
-        int result =
+        int value1 =
             GameManager.Instance.GetCounterPlus(5);
 
-        Debug.Log(result);
+        int value2 =
+            GameManager.Instance.SumValues(10,20);
+
+        Debug.Log(value1);
+        Debug.Log(value2);
     }
 }

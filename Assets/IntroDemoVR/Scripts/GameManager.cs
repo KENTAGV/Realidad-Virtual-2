@@ -5,20 +5,23 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    // VARIABLES (10)
+    // 10 VARIABLES
     public int counter = 0;
     public int health = 100;
     public int lives = 3;
-
-    public float playerSpeed = 5f;
-    public float jumpForce = 10f;
-    public bool isGameOver = false;
-    public string playerName = "Player";
     public int score = 0;
     public int level = 1;
+
+    public float speed = 5f;
+    public float jumpForce = 10f;
+
+    public bool isGameOver = false;
+
+    public string playerName = "Player";
+
     public float timer = 0f;
 
-    // EVENTOS ACTION
+    // ACTION EVENTS
     public event Action OnCounterChanged;
     public event Action OnHealthChanged;
     public event Action OnLivesChanged;
@@ -55,23 +58,24 @@ public class GameManager : MonoBehaviour
         OnLivesChanged?.Invoke();
     }
 
-    // METODOS CON ARGUMENTOS
-    public void AddScore(int value)
+    // 3 METODOS CON 2 ARGUMENTOS
+    public int SumValues(int a, int b)
     {
-        score += value;
+        return a + b;
     }
 
-    public void SetLevel(int newLevel)
+    public int MultiplyValues(int a, int b)
     {
-        level = newLevel;
+        return a * b;
     }
 
-    public void SetPlayerName(string newName)
+    public void SetStats(int healthValue, int livesValue)
     {
-        playerName = newName;
+        health = healthValue;
+        lives = livesValue;
     }
 
-    // METODOS CON RETORNO
+    // 3 METODOS CON RETORNO
     public int GetCounterPlus(int amount)
     {
         return counter + amount;

@@ -12,7 +12,7 @@ public class CounterUI : MonoBehaviour
         GameManager.Instance.OnCounterChanged += UpdateText;
     }
 
-    private void UpdateText()
+    public void UpdateText()
     {
         counterText.text =
             "Counter: " +

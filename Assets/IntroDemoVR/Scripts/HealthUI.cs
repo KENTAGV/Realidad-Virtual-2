@@ -12,7 +12,7 @@ public class HealthUI : MonoBehaviour
         GameManager.Instance.OnHealthChanged += UpdateText;
     }
 
-    private void UpdateText()
+    public void UpdateText()
     {
         healthText.text =
             "Health: " +
